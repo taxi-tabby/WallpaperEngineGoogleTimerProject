@@ -1,5 +1,5 @@
 # WallpaperEngineGoogleTimerProject
-Do I really need to buy it? You can set it as your wallpaper.
+Do you really need to buy it? You can set it as your wallpaper.
 
 <div align="center">
   <img src="./googleTimerWallpaperEngine.gif" alt="Sample Image" width="500" />
