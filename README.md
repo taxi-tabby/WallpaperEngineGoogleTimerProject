@@ -17,3 +17,7 @@ Do I really need to buy it? You can set it as your wallpaper.
 
 4. **Reducing Screen Flicker**  
    If the screen flicker is less intense, it is likely related to the FPS (frames per second) settings. Adjusting FPS may help.
+
+
+## Steam Download link
+not yet
