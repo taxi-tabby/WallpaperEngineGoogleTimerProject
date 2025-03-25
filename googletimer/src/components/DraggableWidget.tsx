@@ -87,7 +87,7 @@ const DraggableWidget: React.FC = () => {
             timer = setInterval(() => {
                 setTimeLeft((prevTime) => prevTime - 1);
                 setCurrentMinute((prevSecond) => prevSecond + 1);
-            }, 1000 * 1);
+            }, 1000 * 60);
         } else if (timeLeft === 0) {
             setIsRunning(false);
 
@@ -117,7 +117,7 @@ const DraggableWidget: React.FC = () => {
         <>
             {
                 (completeCover) && (
-                    <div 
+                    <div
                         className='fixed inset-0 w-full h-full bg-black'
                         style={{
                             animation: 'blink 0.01s infinite',
@@ -214,6 +214,74 @@ const DraggableWidget: React.FC = () => {
                                                 className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-sm shadow-sm focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500"
                                             />
                                         </div>
+
+                                        <div className="flex space-x-2 mb-2">
+                                            <button
+                                                onClick={() => {
+                                                    setIsRunning(false);
+                                                    let minutes = timeLeft + 1;
+                                                    minutes = Math.min(minutes, maxMinute);
+                                                    minutes = Math.max(minutes, 0);
+
+                                                    setTimeLeft(minutes);
+                                                    setCurrentMinute(maxMinute - minutes);
+                                                }}
+                                                className="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-[#333] rounded-md"
+                                            >
+                                                 +1 M
+                                            </button>
+                                            <button
+                                                onClick={() => {
+                                                    setIsRunning(false);
+                                                    let minutes = timeLeft + 5;
+                                                    minutes = Math.min(minutes, maxMinute);
+                                                    minutes = Math.max(minutes, 0);
+
+                                                    setTimeLeft(minutes);
+                                                    setCurrentMinute(maxMinute - minutes);
+                                                }}
+                                                className="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-[#333] rounded-md"
+                                            >
+                                                 +5 M
+                                            </button>
+
+                                            <button
+                                                onClick={() => {
+                                                    setIsRunning(false);
+                                                    let minutes = timeLeft - 1;
+                                                    minutes = Math.min(minutes, maxMinute);
+                                                    minutes = Math.max(minutes, 0);
+
+                                                    setTimeLeft(minutes);
+                                                    setCurrentMinute(maxMinute - minutes);
+                                                }}
+                                                className="px-4 py-2 bg-[#360606] hover:bg-[#360606] text-[#fafafa] rounded-md"
+                                            >
+                                                 -1 M
+                                            </button>
+                                            <button
+                                                onClick={() => {
+                                                    setIsRunning(false);
+                                                    let minutes = timeLeft - 5;
+                                                    minutes = Math.min(minutes, maxMinute);
+                                                    minutes = Math.max(minutes, 0);
+
+                                                    setTimeLeft(minutes);
+                                                    setCurrentMinute(maxMinute - minutes);
+                                                }}
+                                                className="px-4 py-2 bg-[#360606] hover:bg-[#360606] text-[#fafafa] rounded-md"
+                                            >
+                                                 -5 M
+                                            </button>
+
+                                            
+                                        </div>
+
+                                        <div className="flex space-x-2 mb-4">
+
+                                            
+                                        </div>
+
                                         <div className="flex space-x-4">
                                             <button
                                                 onClick={() => {

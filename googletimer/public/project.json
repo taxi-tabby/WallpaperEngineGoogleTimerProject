@@ -1,0 +1,28 @@
+{
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"github" : 
+			{
+				"index" : 0,
+				"order" : 100,
+				"text" : "Github",
+				"type" : "textinput",
+				"value" : "https://github.com/taxi-tabby/WallpaperEngineGoogleTimerProject"
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0 0 0"
+			}
+		}
+	},
+	"preview" : "preview.jpg",
+	"title" : "Google Timer",
+	"type" : "web",
+	"version" : 0
+}
